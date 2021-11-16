@@ -29,11 +29,11 @@ import java.util.List;
 @Slf4j
 @Component
 public class BusSearchHandler implements InputMessageHandler {
-    private UserDataCache userDataCache;
-    private BusTicketsGetInfoService busTicketsService;
-    private BusStationCodeService busStationCodeService;
-    private SendTicketsInfoService sendTicketsInfoService;
-    private ReplyMessagesService messagesService;
+    private final UserDataCache userDataCache;
+    private final BusTicketsGetInfoService busTicketsService;
+    private final BusStationCodeService busStationCodeService;
+    private final SendTicketsInfoService sendTicketsInfoService;
+    private final ReplyMessagesService messagesService;
 
     public BusSearchHandler(UserDataCache userDataCache, BusTicketsGetInfoService busTicketsService,
                             BusStationCodeService busStationCodeService, ReplyMessagesService messagesService,

@@ -25,11 +25,11 @@ import java.util.Optional;
 @Component
 public class SubscribeTicketsInfoQueryHandler implements CallbackQueryHandler {
     private static final CallbackQueryType HANDLER_QUERY_TYPE = CallbackQueryType.SUBSCRIBE;
-    private UserTicketsSubscriptionService subscriptionService;
-    private ParseQueryDataService parseService;
-    private ReplyMessagesService messagesService;
-    private UserDataCache userDataCache;
-    private MinskTransTelegramBot telegramBot;
+    private final UserTicketsSubscriptionService subscriptionService;
+    private final ParseQueryDataService parseService;
+    private final ReplyMessagesService messagesService;
+    private final UserDataCache userDataCache;
+    private final MinskTransTelegramBot telegramBot;
 
 
     public SubscribeTicketsInfoQueryHandler(UserTicketsSubscriptionService subscribeService,
@@ -94,8 +94,8 @@ public class SubscribeTicketsInfoQueryHandler implements CallbackQueryHandler {
 
         Bus queriedBus = queriedBusOptional.get();
         final String busName = queriedBus.getBrand();
-        final String stationDepart = queriedBus.getStationDepart();
-        final String stationArrival = queriedBus.getStationArrival();
+        final String stationDepart = queriedBus.getBusStationDepart();
+        final String stationArrival = queriedBus.getBusStationArrival();
         final String dateArrival = queriedBus.getDateArrival();
         final String timeDepart = queriedBus.getTimeDepart();
         final String timeArrival = queriedBus.getTimeArrival();

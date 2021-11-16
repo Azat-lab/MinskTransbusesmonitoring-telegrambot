@@ -5,9 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 /**
- * Вагон поезда
+ * Номер Автобуса
  *
- * @author Sergei Viacheslaev
+ * @author Azat9011
  */
 @AllArgsConstructor
 @NoArgsConstructor

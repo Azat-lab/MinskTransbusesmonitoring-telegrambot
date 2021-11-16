@@ -30,12 +30,12 @@ import java.util.function.Predicate;
 @Service
 public class UserSubscriptionProcessService {
     private final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd.MM.yyyy");
-    private UserTicketsSubscriptionService subscriptionService;
-    private BusTicketsGetInfoService busTicketsGetInfoService;
-    private BusStationCodeService busStationCodeService;
-    private CarsProcessingService carsProcessingService;
-    private ReplyMessagesService messagesService;
-    private MinskTransTelegramBot telegramBot;
+    private final UserTicketsSubscriptionService subscriptionService;
+    private final BusTicketsGetInfoService busTicketsGetInfoService;
+    private final BusStationCodeService busStationCodeService;
+    private final CarsProcessingService carsProcessingService;
+    private final ReplyMessagesService messagesService;
+    private final MinskTransTelegramBot telegramBot;
 
     public UserSubscriptionProcessService(UserTicketsSubscriptionService subscriptionService,
                                           BusTicketsGetInfoService busTicketsGetInfoService,

@@ -19,10 +19,10 @@ import java.util.List;
  */
 @Service
 public class SendTicketsInfoService {
-    private MinskTransTelegramBot telegramBot;
-    private CarsProcessingService carsProcessingService;
-    private UserDataCache userDataCache;
-    private ReplyMessagesService messagesService;
+    private final MinskTransTelegramBot telegramBot;
+    private final CarsProcessingService carsProcessingService;
+    private final UserDataCache userDataCache;
+    private final ReplyMessagesService messagesService;
 
     public SendTicketsInfoService(CarsProcessingService carsProcessingService,
                                   UserDataCache userDataCache,

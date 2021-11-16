@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * @author Sergei Viacheslaev
+ * @author Azat9011
  */
 @Repository
 public interface UserTicketsSubscriptionMongoRepository extends MongoRepository<UserTicketsSubscription, String> {

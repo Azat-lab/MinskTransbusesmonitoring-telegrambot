@@ -13,7 +13,7 @@ import java.util.Optional;
 @Component
 @Getter
 public class BusStationsDataCache implements StationsCache {
-    private Map<String, Integer> busStationCodeCache = new HashMap<>();
+    private final Map<String, Integer> busStationCodeCache = new HashMap<>();
 
     @Override
     public Optional<String> getBusStationName(String busStationNameParam) {

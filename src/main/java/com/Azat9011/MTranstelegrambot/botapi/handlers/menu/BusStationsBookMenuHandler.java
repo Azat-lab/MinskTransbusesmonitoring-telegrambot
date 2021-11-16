@@ -13,9 +13,9 @@ import com.Azat9011.MTranstelegrambot.service.ReplyMessagesService;
 
 @Component
 public class BusStationsBookMenuHandler implements InputMessageHandler {
-    private ReplyMessagesService messagesService;
-    private BusStationBookService busStationsBookService;
-    private UserDataCache userDataCache;
+    private final ReplyMessagesService messagesService;
+    private final BusStationBookService busStationsBookService;
+    private final UserDataCache userDataCache;
 
     public BusStationsBookMenuHandler(ReplyMessagesService messagesService, BusStationBookService busStationsBookService,
                                       UserDataCache userDataCache) {

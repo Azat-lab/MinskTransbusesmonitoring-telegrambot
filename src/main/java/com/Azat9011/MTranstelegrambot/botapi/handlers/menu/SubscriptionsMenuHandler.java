@@ -19,10 +19,10 @@ import java.util.List;
 
 @Component
 public class SubscriptionsMenuHandler implements InputMessageHandler {
-    private UserTicketsSubscriptionService subscribeService;
-    private MinskTransTelegramBot telegramBot;
-    private UserDataCache userDataCache;
-    private ReplyMessagesService messagesService;
+    private final UserTicketsSubscriptionService subscribeService;
+    private final MinskTransTelegramBot telegramBot;
+    private final UserDataCache userDataCache;
+    private final ReplyMessagesService messagesService;
 
     public SubscriptionsMenuHandler(UserTicketsSubscriptionService subscribeService,
                                     UserDataCache userDataCache,

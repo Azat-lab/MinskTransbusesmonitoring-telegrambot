@@ -14,9 +14,9 @@ import com.Azat9011.MTranstelegrambot.cache.UserDataCache;
 @Service
 @Slf4j
 public class TelegramFacade {
-    private UserDataCache userDataCache;
-    private BotStateContext botStateContext;
-    private CallbackQueryFacade callbackQueryFacade;
+    private final UserDataCache userDataCache;
+    private final BotStateContext botStateContext;
+    private final CallbackQueryFacade callbackQueryFacade;
 
     public TelegramFacade(UserDataCache userDataCache, BotStateContext botStateContext,
                           CallbackQueryFacade callbackQueryFacade) {

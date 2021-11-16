@@ -18,9 +18,9 @@ import java.util.*;
  */
 @Service
 public class UserDataCache implements DataCache {
-    private Map<Integer, BotState> usersBotStates = new HashMap<>();
-    private Map<Integer, BusSearchRequestData> busSearchUsersData = new HashMap<>();
-    private Map<Long, List<Bus>> searchFoundedBuses = new HashMap<>();
+    private final Map<Integer, BotState> usersBotStates = new HashMap<>();
+    private final Map<Integer, BusSearchRequestData> busSearchUsersData = new HashMap<>();
+    private final Map<Long, List<Bus>> searchFoundedBuses = new HashMap<>();
 
     @Override
     public void setUsersCurrentBotState(int userId, BotState botState) {

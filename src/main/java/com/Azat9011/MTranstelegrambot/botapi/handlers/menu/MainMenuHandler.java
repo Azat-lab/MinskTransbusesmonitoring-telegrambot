@@ -10,8 +10,8 @@ import com.Azat9011.MTranstelegrambot.service.ReplyMessagesService;
 
 @Component
 public class MainMenuHandler implements InputMessageHandler {
-    private ReplyMessagesService messagesService;
-    private MainMenuService mainMenuService;
+    private final ReplyMessagesService messagesService;
+    private final MainMenuService mainMenuService;
 
     public MainMenuHandler(ReplyMessagesService messagesService, MainMenuService mainMenuService) {
         this.messagesService = messagesService;

@@ -15,7 +15,7 @@ import java.util.Optional;
 @Service
 public class UserTicketsSubscriptionService {
 
-    private UserTicketsSubscriptionMongoRepository subscriptionsRepository;
+    private final UserTicketsSubscriptionMongoRepository subscriptionsRepository;
 
     public UserTicketsSubscriptionService(UserTicketsSubscriptionMongoRepository repository) {
         this.subscriptionsRepository = repository;

@@ -30,9 +30,9 @@ import java.util.stream.Collectors;
 public class BusStationBookService {
     @Value("${stationcodeservice.requesttemplate}")  //https://minsktrans.by/lookout_yard/Home/Index/minsk#/routes/bus
     private String busStationSearchTemplate;
-    private RestTemplate restTemplate;
-    private BusStationsDataCache busStationsCache;
-    private ReplyMessagesService messagesService;
+    private final RestTemplate restTemplate;
+    private final BusStationsDataCache busStationsCache;
+    private final ReplyMessagesService messagesService;
 
     public BusStationBookService(RestTemplate restTemplate, BusStationsDataCache busStationsCache, ReplyMessagesService messagesService) {
         this.restTemplate = restTemplate;
