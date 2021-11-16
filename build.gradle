@@ -1,0 +1,63 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'Study'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '12'
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //region Spring
+    implementation 'org.springframework.boot:spring-boot-starter-actuator:2.5.5'
+    implementation 'org.jetbrains:annotations:22.0.0'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools:2.5.5'
+   // compile'org.springframework.boot:spring-boot-configuration-processor:2.5.5'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.1.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.2.1.RELEASE'
+    compile 'org.springframework.boot:spring-boot-configuration-processor:2.5.5'
+    compile 'org.springframework.boot:spring-boot-properties-migrator:2.5.5'
+    //endregion
+
+    //region DB
+    compile group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: '2.2.0'
+    //endregion
+
+    //region Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor:2.5.5'
+    //endregion
+
+    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+    compile group: 'org.telegram', name: 'telegrambots-spring-boot-starter', version: '4.4.0.2'
+    compile group: 'com.vdurmont', name: 'emoji-java', version: '5.1.1'
+
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test:2.5.5') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+        exclude group: "com.vaadin.external.google", module:"android-json"
+    }
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
